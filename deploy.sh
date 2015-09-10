@@ -11,3 +11,4 @@ ssh -l alice 192.168.122.100 "oc login -u alice --insecure-skip-tls-verify --ser
 ssh -l alice 192.168.122.100 "oc new-project $NEW_PROJECT"
 ssh -l alice 192.168.122.100 "oc project $NEW_PROJECT"
 ssh -l alice 192.168.122.100 "oc new-app $GIT_URL"
+ssh -l alice 192.168.122.100 "oc expose service $APP_NAME --hostname=$APP_NAME.cloudapps.rhpaas.com
